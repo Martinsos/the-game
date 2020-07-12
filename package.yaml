@@ -1,13 +1,13 @@
 # This YAML file describes your package. Stack will automatically generate a
 # Cabal file when you run `stack build`. See the hpack website for help with
 # this file: <https://github.com/sol/hpack>.
-name:                starter
+name:                the-game 
 version:             0.1.0.0
-github:              "Martinsos/haskell-stack-starter"
+github:              "Martinsos/the-game"
 license:             MIT
 author:              "Martin Sosic"
 maintainer:          "sosic.martin@gmail.com"
-copyright:           "2019 Martin Sosic"
+copyright:           "2020 Martin Sosic"
 
 default-extensions: OverloadedStrings
 
@@ -21,7 +21,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/Martinsos/haskell-stack-starter#readme>
+description:         Please see the README on GitHub at <https://github.com/Martinsos/the-game#readme>
 
 dependencies:
   - base >= 4.7 && < 5
@@ -42,10 +42,10 @@ executables:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - starter
+      - the-game 
 
 benchmarks:
-  starter-benchmarks:
+  the-game-benchmarks:
     main:                Main.hs
     source-dirs:         benchmark
     ghc-options:
@@ -53,11 +53,11 @@ benchmarks:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - starter
+      - the-game
       - criterion
 
 tests:
-  starter-test:
+  the-game-test:
     main:                TastyDiscoverDriver.hs
     source-dirs:         test
     ghc-options:
@@ -65,7 +65,7 @@ tests:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - starter
+      - the-game
       - tasty
       - tasty-hspec
       - tasty-quickcheck
